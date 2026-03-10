@@ -35,8 +35,10 @@ Participants can enter for as many languages as they like; each language is eval
 
 | Language | Region |
 |---|---|
+| Bribri | Costa Rica |
+| Guaraní | Paraguay |
+| Maya | Mexico |
 | Wixárika | Mexico |
-| *TBA* | |
 
 ## Data
 
@@ -45,6 +47,10 @@ Participants can enter for as many languages as they like; each language is eval
 Pilot data is available under [`data/pilot/`](data/pilot/). Each dataset is provided as a JSONL file with corresponding images. See [`data/pilot/wixarika.jsonl`](data/pilot/wixarika.jsonl) for an example.
 
 > **⚠️ Note:** The pilot data includes Spanish captions for reference, but these are provided **only in the pilot set**. Spanish captions will **not** be included in the development or test sets and should not be relied upon for building systems.
+
+### Development
+
+Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaraní, Maya and Wixárika. Each language folder contains a JSONL file and corresponding images.
 
 ## Important Dates
 
@@ -65,4 +71,4 @@ If you are interested in participating, please register here: [Google Form](http
 
 ## Contact
 
-📧 [americas.nlp.workshop@gmail.com](mailto:americas.nlp.workshop@gmail.com)
+[americas.nlp.workshop@gmail.com](mailto:americas.nlp.workshop@gmail.com)
