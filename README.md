@@ -21,7 +21,7 @@ Participants are given a dataset of culturally situated images, each paired with
 ### Rules
 
 - Participants may use the provided training and development data, plus **any additional resources** (external data, pretrained models, etc.).
-- Participants must **not** create test outputs manually or train on the development or test sets.
+- Participants must **not** create test outputs manually or test sets ~~or train on the development~~ (**UPDATE:** participants are allowed to use the dev set for training) 
 
 ### Evaluation
 
@@ -37,7 +37,7 @@ Participants can enter for as many languages as they like; each language is eval
 |---|---|
 | Bribri | Costa Rica |
 | Guaraní | Paraguay |
-| Maya | Mexico |
+| Yucatec Maya | Mexico |
 | Wixárika | Mexico |
 
 ## Data
@@ -58,7 +58,7 @@ Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaran�
 |---|---|
 | February 20, 2025 | Release of pilot data and baseline system |
 | March 1, 2025 | Release of development sets (50 examples) |
-| April 1, 2025 | Release of surprise languages (if any) |
+| April 1, 2025 | Release of surprise languages |
 | April 20, 2025 | Release of test sets |
 | May 1, 2025 | Submission of results (shared task deadline) |
 
