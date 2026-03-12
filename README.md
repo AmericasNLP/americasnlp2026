@@ -21,7 +21,7 @@ Participants are given a dataset of culturally situated images, each paired with
 ### Rules
 
 - Participants may use the provided training and development data, plus **any additional resources** (external data, pretrained models, etc.).
-- Participants must **not** create test outputs manually or test sets ~~or train on the development~~ (**UPDATE:** participants are allowed to use the dev set for training) 
+- Participants must **not** create test outputs manually or train on the test sets ~~or train on the development~~ (**UPDATE:** participants are allowed to use the development set for training) 
 
 ### Evaluation
 
