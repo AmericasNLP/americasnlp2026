@@ -61,6 +61,10 @@ Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaran√
 | April 1, 2026 | Release of surprise languages |
 | April 20, 2026 | Release of test sets |
 | May 1, 2026 | Submission of results (shared task deadline) |
+| May 8, 2026 | Winner announcement |
+| May 13, 2026 | Submission of system description paper |
+| May 15, 2026 | Acceptance notification for system description papers |
+| May 22, 2026 | Camera-ready version due |
 
 All deadlines are **11:59 pm UTC-12h (AoE)**.
 
