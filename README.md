@@ -2,6 +2,8 @@
 
 The AmericasNLP 2026 Shared Task challenges participants to develop systems that generate accurate, culturally grounded captions for images depicting Indigenous cultures of the Americas, written in the Indigenous languages themselves.
 
+**Update: We have released a surprise addition to our language lineup: Nahuatl!**
+
 ## Motivation
 
 Many Indigenous languages of the Americas are endangered and lack the resources needed to train NLP systems effectively. Language communities are actively pursuing revitalization, but creating culturally grounded teaching materials is expensive and time-consuming. Image captioning systems present an opportunity to generate such materials at scale, but doing so requires not only linguistic competence but also cultural knowledge — understanding the people, traditions, and contexts depicted in the images.
@@ -39,6 +41,7 @@ Participants can enter for as many languages as they like; each language is eval
 | Guaraní | Paraguay |
 | Yucatec Maya | Mexico |
 | Wixárika | Mexico |
+| Nahuatl | |
 
 ## Data
 
