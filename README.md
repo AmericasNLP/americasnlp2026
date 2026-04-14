@@ -47,7 +47,7 @@ Participants can enter for as many languages as they like; each language is eval
 | Guaraní | Paraguay |
 | Yucatec Maya | Mexico |
 | Wixárika | Mexico |
-| Orizaba Nahuatl (nlv), part of broader Nahuatl (nah) | |
+| Orizaba Nahuatl (nlv), part of broader Nahuatl (nah) | Mexico |
 
 ## Data
 
@@ -59,7 +59,7 @@ Pilot data is available under [`data/pilot/`](data/pilot/). Each dataset is prov
 
 ### Development
 
-Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaraní, Maya and Wixárika. Each language folder contains a JSONL file and corresponding images.
+Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaraní, Maya, Wixárika and Nahuatl. Each language folder contains a JSONL file and corresponding images.
 
 ## Important Dates
 
