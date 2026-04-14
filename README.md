@@ -20,10 +20,16 @@ Participants are given a dataset of culturally situated images, each paired with
 | **Target Caption (Wixárika)** | *Ik+ kareta m+ya kaxetuni wixárika wapait+ yu +kú puti utá, uti xainék+ metá tsiere manapait+ rá ye hupú.* |
 | **English** | The so-called carretón, built specifically to store food like corn, is also used as housing for people. |
 
-### Rules
+## Rules
+
+### General
 
 - Participants may use the provided training and development data, plus **any additional resources** (external data, pretrained models, etc.).
-- Participants must **not** create test outputs manually or train on the test sets ~~or train on the development~~ (**UPDATE:** participants are allowed to use the development set for training) 
+- Participants must **not** create test outputs manually or train on the test sets ~~or train on the development~~ (**UPDATE:** participants are allowed to use the development set for training)
+
+### Submission Format
+
+We will provide participants with a JSONL file containing the following fields (same as dev set, but without the `target_caption`: `id`, `filename`, `split`, `culture`, `language`, and `iso_lang`. Participants must generate a `predicted_caption` for each entry and include it as an additional field in their submission file.
 
 ### Evaluation
 
