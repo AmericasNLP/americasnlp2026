@@ -29,7 +29,7 @@ Participants are given a dataset of culturally situated images, each paired with
 
 ### Submission Format
 
-We will provide participants with a JSONL file containing the following fields (same as dev set, but without the `target_caption`: `id`, `filename`, `split`, `culture`, `language`, and `iso_lang`. Participants must generate a `predicted_caption` for each entry and include it as an additional field in their submission file.
+We will provide participants with a JSONL file (alongside the images) containing the following fields (same as dev set, but without the `target_caption`: `id`, `filename`, `split`, `culture`, `language`, and `iso_lang`. Participants must generate a `predicted_caption` for each entry and include it as an additional field in their submission file.
 
 ### Evaluation
 
