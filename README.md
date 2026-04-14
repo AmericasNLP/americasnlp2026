@@ -2,7 +2,7 @@
 
 The AmericasNLP 2026 Shared Task challenges participants to develop systems that generate accurate, culturally grounded captions for images depicting Indigenous cultures of the Americas, written in the Indigenous languages themselves.
 
-**Update: We have released a surprise addition to our language lineup: Nahuatl!**
+**Update: We have released a surprise addition to our language lineup: Orizaba Nahuatl (nlv), part of the broader Nahuatl (nah) language family!**
 
 ## Motivation
 
@@ -47,7 +47,7 @@ Participants can enter for as many languages as they like; each language is eval
 | Guaraní | Paraguay |
 | Yucatec Maya | Mexico |
 | Wixárika | Mexico |
-| Nahuatl | |
+| Orizaba Nahuatl (nlv), part of broader Nahuatl (nah) | |
 
 ## Data
 
