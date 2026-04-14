@@ -1,0 +1,248 @@
+#!/usr/bin/env python3
+"""
+Translate between any language pair using a fine-tuned NLLB model.
+
+Usage:
+    # Translate Spanish to Wixarika (default)
+    python translate_nllb.py --checkpoint submission_3.pt --text "Hola, ¿cómo estás?"
+
+    # Translate from a file (one sentence per line)
+    python translate_nllb.py --checkpoint submission_3.pt --src spa_Latn --tgt hch_Latn --input input.txt --output output.txt
+
+    # Interactive mode
+    python translate_nllb.py --checkpoint submission_3.pt --src spa_Latn --tgt hch_Latn
+"""
+
+import argparse
+import re
+import sys
+import os
+
+import sentencepiece as spm
+import torch
+
+# Add the local fairseq fork to the path
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(REPO_ROOT, "fairseq"))
+
+from fairseq import checkpoint_utils, tasks, utils
+from fairseq.data import Dictionary, encoders
+
+SPM_MODEL = os.path.join(REPO_ROOT, "NLLB-inference", "preprocess", "flores200_sacrebleu_tokenizer_spm.model")
+DICT_PATH = os.path.join(REPO_ROOT, "NLLB-inference", "dictionary.txt")
+LANGS_FILE = os.path.join(REPO_ROOT, "NLLB-inference", "langs_extra.txt")
+
+
+def load_langs(langs_file):
+    with open(langs_file) as f:
+        return f.read().strip().split(",")
+
+
+def build_generator(args, task, models):
+    return task.build_generator(models, args)
+
+
+def translate(text, sp, task, models, generator, src_lang, tgt_lang, beam=5, max_len_a=1.2, max_len_b=10):
+    """Translate a single sentence."""
+    # Tokenize with SentencePiece
+    tokenized = sp.encode(text, out_type=str)
+    # Prepend the source language token
+    tokenized = [f"__{src_lang}__"] + tokenized
+
+    # Encode to fairseq token IDs
+    src_dict = task.source_dictionary
+    tokens = [src_dict.index(t) for t in tokenized]
+    tokens.append(src_dict.eos())
+    src_tokens = torch.LongTensor(tokens).unsqueeze(0)
+
+    src_lengths = torch.LongTensor([len(tokens)])
+
+    if torch.cuda.is_available():
+        src_tokens = src_tokens.cuda()
+        src_lengths = src_lengths.cuda()
+
+    sample = {
+        "net_input": {
+            "src_tokens": src_tokens,
+            "src_lengths": src_lengths,
+        }
+    }
+
+    # Generate translation using task.inference_step, which forces the correct
+    # target language token as the decoder prefix.
+    hypos = task.inference_step(generator, models, sample)
+
+    # Decode the best hypothesis
+    best_hypo = hypos[0][0]
+    hypo_tokens = best_hypo["tokens"].int().cpu()
+
+    # Convert token IDs back to strings
+    tgt_dict = task.target_dictionary
+    hypo_str = tgt_dict.string(hypo_tokens, extra_symbols_to_ignore={tgt_dict.eos(), tgt_dict.pad()})
+
+    # Remove target language token if present
+    hypo_str = hypo_str.replace(f"__{tgt_lang}__", "").strip()
+    # Defensively remove any other language tokens that might slip through
+    hypo_str = re.sub(r"__\w+__", "", hypo_str).strip()
+
+    # Detokenize with SentencePiece
+    pieces = hypo_str.split()
+    detokenized = sp.decode(pieces)
+
+    # Remove potential dataset tag tokens
+    detokenized = detokenized.replace("<MINED_DATA>", "").strip()
+
+    return detokenized
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Translate between any NLLB language pair")
+    parser.add_argument("--checkpoint", required=True, help="Path to the model checkpoint (e.g., submission_3.pt)")
+    parser.add_argument("--src", type=str, default="spa_Latn", help="Source language code (default: spa_Latn)")
+    parser.add_argument("--tgt", type=str, default="hch_Latn", help="Target language code (default: hch_Latn)")
+    parser.add_argument("--text", type=str, default=None, help="Text to translate")
+    parser.add_argument("--input", type=str, default=None, help="Input file with one sentence per line")
+    parser.add_argument("--output", type=str, default=None, help="Output file for translations")
+    parser.add_argument("--beam", type=int, default=5, help="Beam size (default: 5)")
+    parser.add_argument("--cpu", action="store_true", help="Force CPU inference")
+    parser.add_argument("--list-langs", action="store_true", help="List available language codes and exit")
+    args = parser.parse_args()
+
+    langs = load_langs(LANGS_FILE)
+
+    # List languages mode
+    if args.list_langs:
+        #print("Available language codes:")
+        #for lang in sorted(langs):
+        #    print(f"  {lang}")
+        sys.exit(0)
+
+    src_lang = args.src
+    tgt_lang = args.tgt
+
+    # Validate language codes
+    if src_lang not in langs:
+        print(f"Error: source language '{src_lang}' not found in langs file.", file=sys.stderr)
+        print(f"Use --list-langs to see available codes.", file=sys.stderr)
+        sys.exit(1)
+    if tgt_lang not in langs:
+        print(f"Error: target language '{tgt_lang}' not found in langs file.", file=sys.stderr)
+        print(f"Use --list-langs to see available codes.", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Translation direction: {src_lang} -> {tgt_lang}", file=sys.stderr)
+
+    # Set up fairseq args for loading the model
+    task_args = argparse.Namespace(
+        task="translation_multi_simple_epoch",
+        langs=langs,
+        lang_dict=None,
+        lang_pairs=f"{src_lang}-{tgt_lang}",
+        fixed_dictionary=DICT_PATH,
+        source_dict=None,
+        target_dict=None,
+        source_lang=src_lang,
+        target_lang=tgt_lang,
+        encoder_langtok="src",
+        decoder_langtok=True,
+        lang_tok_replacing_bos_eos=False,
+        sampling_method="temperature",
+        sampling_temperature="1",
+        data="",
+        left_pad_source=True,
+        left_pad_target=False,
+        langtoks=None,
+        langtoks_specs=["main"],
+        extra_data=None,
+        extra_lang_pairs=None,
+        lang_tok_style="multilingual",
+        add_data_source_prefix_tags=True,
+        add_ssl_task_tokens=False,
+        finetune_dict_specs=None,
+        shuffle_instance=False,
+        virtual_epoch_size=None,
+        virtual_data_size=None,
+        eval_lang_pairs=None,
+        seed=1,
+        pad_to_fixed_length=False,
+    )
+
+    task = tasks.setup_task(task_args)
+
+    # Load the model
+    print(f"Loading model from {args.checkpoint}...", file=sys.stderr)
+    models, _model_args = checkpoint_utils.load_model_ensemble(
+        [args.checkpoint],
+        task=task,
+    )
+
+    for model in models:
+        model.eval()
+        if torch.cuda.is_available() and not args.cpu:
+            model.cuda()
+        model.half()
+
+    # Build generator with beam search
+    gen_args = argparse.Namespace(
+        beam=args.beam,
+        max_len_a=1.2,
+        max_len_b=10,
+        min_len=1,
+        unnormalized=False,
+        lenpen=1.0,
+        unkpen=0,
+        temperature=1.0,
+        match_source_len=False,
+        no_repeat_ngram_size=0,
+        sampling=False,
+        diverse_beam_groups=-1,
+        diverse_beam_strength=0.5,
+    )
+    generator = build_generator(gen_args, task, models)
+
+    # Load SentencePiece model
+    sp = spm.SentencePieceProcessor()
+    sp.load(SPM_MODEL)
+
+    def do_translate(text):
+        return translate(text, sp, task, models, generator, src_lang, tgt_lang, beam=args.beam)
+
+    # Translate based on input mode
+    if args.text:
+        result = do_translate(args.text)
+        #print(f"[{src_lang}] {args.text}")
+        #print(f"[{tgt_lang}] {result}")
+
+    elif args.input:
+        out_file = open(args.output, "w") if args.output else sys.stdout
+        with open(args.input) as f:
+            for i, line in enumerate(f):
+                line = line.strip()
+                if not line:
+                    print("", file=out_file)
+                    continue
+                result = do_translate(line)
+                print(result, file=out_file)
+                print(f"[{i + 1}] [{src_lang}] {line}", file=sys.stderr)
+                print(f"[{i + 1}] [{tgt_lang}] {result}", file=sys.stderr)
+        if args.output:
+            out_file.close()
+
+    else:
+        # Interactive mode
+        print(f"Interactive mode ({src_lang} -> {tgt_lang}): type text and press Enter. Ctrl+D to exit.", file=sys.stderr)
+        try:
+            for line in sys.stdin:
+                line = line.strip()
+                if not line:
+                    continue
+                result = do_translate(line)
+                print(f"[{src_lang}] {line}")
+                print(f"[{tgt_lang}] {result}")
+                sys.stdout.flush()
+        except EOFError:
+            pass
+
+
+if __name__ == "__main__":
+    main()
