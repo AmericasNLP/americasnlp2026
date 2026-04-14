@@ -65,9 +65,9 @@ Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaran√
 
 | Date | Milestone |
 |---|---|
-| February 20, 2026 | Release of pilot data and baseline system |
-| March 1, 2026 | Release of development sets (50 examples) |
-| April 1, 2026 | Release of surprise languages |
+| ~~February 20, 2026~~ | ~~Release of pilot data and baseline system~~ |
+| ~~March 1, 2026~~ | ~~Release of development sets (50 examples)~~ |
+| ~~April 1, 2026~~ ~~April 13, 2026~~ | ~~Release of surprise languages~~ |
 | April 20, 2026 | Release of test sets |
 | May 1, 2026 | Submission of results (shared task deadline) |
 | May 8, 2026 | Winner announcement |
