@@ -11,6 +11,12 @@ The baseline follows a two-stage **generate-then-translate** pipeline:
 1. **Image Captioning in Spanish** — A Vision-Language Model ([Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)) generates a culturally-informed caption in Spanish using a detailed prompt that includes Wixárika cultural context (religious elements, art, ceremonies, material culture, etc.).
 2. **Translation to the Target Language** — The Spanish caption is translated into Wixárika using [Sheffield's winning submission](https://aclanthology.org/2023.americasnlp-1.21/) from the AmericasNLP 2023 Shared Task on Machine Translation into Indigenous Languages.
 
+
+### Why Spanish as an Intermediate Language?
+
+Existing machine translation resources for Indigenous languages of the Americas are primarily paired with Spanish. Using Spanish as a pivot allows the baseline to leverage available MT systems.
+
+
 ## Results on dev set
 
 | Language  | chrF++ |
@@ -20,10 +26,6 @@ The baseline follows a two-stage **generate-then-translate** pipeline:
 | Guaraní   | 20.82  |
 | Nahuatl   | 11.53  |
 | Maya   | --  |
-
-### Why Spanish as an Intermediate Language?
-
-Existing machine translation resources for Indigenous languages of the Americas are primarily paired with Spanish. Using Spanish as a pivot allows the baseline to leverage available MT systems.
 
 ## Culturally-Informed Prompting
 
