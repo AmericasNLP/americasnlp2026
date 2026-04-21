@@ -2,6 +2,9 @@
 
 The AmericasNLP 2026 Shared Task challenges participants to develop systems that generate accurate, culturally grounded captions for images depicting Indigenous cultures of the Americas, written in the Indigenous languages themselves.
 
+**Update (20th of April): The test set has been released!**
+
+
 **Update (13th of April): We have released a surprise addition to our language lineup: Orizaba Nahuatl (nlv), part of the broader Nahuatl (nah) language family!**
 
 ## Motivation
@@ -68,7 +71,7 @@ Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaran√
 | ~~February 20, 2026~~ | ~~Release of pilot data and baseline system~~ |
 | ~~March 1, 2026~~ | ~~Release of development sets (50 examples)~~ |
 | ~~April 1, 2026~~ ~~April 13, 2026~~ | ~~Release of surprise languages~~ |
-| April 20, 2026 | Release of test sets |
+| ~~April 20, 2026~~ | ~~Release of test sets~~ |
 | May 1, 2026 | Submission of results (shared task deadline) |
 | May 8, 2026 | Winner announcement |
 | May 13, 2026 | Submission of system description paper |
