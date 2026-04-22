@@ -2,8 +2,9 @@
 
 The AmericasNLP 2026 Shared Task challenges participants to develop systems that generate accurate, culturally grounded captions for images depicting Indigenous cultures of the Americas, written in the Indigenous languages themselves.
 
-**Update (20th of April): The test set has been released!**
+**Update (22th of April): We have updated the Guarani test set to remove duplicate entries. Please download the revised version and regenerate your predictions. If you submit the old test set, we will keep only the first prediction for each duplicated item as your official entry!**
 
+**Update (20th of April): The test set has been released!**
 
 **Update (13th of April): We have released a surprise addition to our language lineup: Orizaba Nahuatl (nlv), part of the broader Nahuatl (nah) language family!**
 
