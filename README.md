@@ -34,6 +34,24 @@ Participants are given a dataset of culturally situated images, each paired with
 
 We will provide participants with a JSONL file (alongside the images) containing the following fields (same as dev set, but without the `target_caption`: `id`, `filename`, `split`, `culture`, `language`, and `iso_lang`. Participants must generate a `predicted_caption` for each entry and include it as an additional field in their submission file.
 
+### How to Submit
+
+Send your submission via email to americas.nlp.workshop@gmail.com
+
+In the email body, include:
+
+- Line 1: Team name
+- Line 2: Names of all team members
+- Line 3: All languages you are sending submissions for, in the order of your choice (we will use this to double-check that we received all the files you intended to send)
+[optional]
+- Line 4: A link to a GitHub repository with code that can be used to reproduce your results. This is not required to participate in the shared task, but it is strongly encouraged.
+
+
+**Attachment:**
+
+Please attach all output files to your email as a single zip file, named after your team (e.g., `TeamName.zip`). Within that zip file, individual files should be named `<language>-<version>.jsonl` (e.g., `bribri-0.jsonl`). The language name should match the one used in the corresponding evaluation set. The version number lets you submit multiple runs of your system per language; it must be a single digit (please don't submit more than 9 versions per language).
+
+
 ### Evaluation
 
 We adopt a **two-stage evaluation protocol**:
