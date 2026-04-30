@@ -2,6 +2,8 @@
 
 The AmericasNLP 2026 Shared Task challenges participants to develop systems that generate accurate, culturally grounded captions for images depicting Indigenous cultures of the Americas, written in the Indigenous languages themselves.
 
+**Update (April 30): We've adjusted our timeline and are pushing back the winner announcement (and subsequent deadlines) by a few days!**
+
 **Update (24th of April):  A corrupted image in the Bribri test set has been fixed. Please re-download the updated test set!**
 
 **Update (22th of April): We have updated the Guarani test set to remove duplicate entries. Please download the revised version and regenerate your predictions. If you submit the old test set, we will keep only the first prediction for each duplicated item as your official entry!**
@@ -94,9 +96,9 @@ Development data is available under [`data/dev/`](data/dev/) for Bribri, Guaran√
 | ~~April 1, 2026~~ ~~April 13, 2026~~ | ~~Release of surprise languages~~ |
 | ~~April 20, 2026~~ | ~~Release of test sets~~ |
 | May 1, 2026 | Submission of results (shared task deadline) |
-| May 8, 2026 | Winner announcement |
-| May 13, 2026 | Submission of system description paper |
-| May 15, 2026 | Acceptance notification for system description papers |
+| ~~May 8, 2026~~ May 12, 2026 | Winner announcement |
+| ~~May 13, 2026~~ May 16, 2026 | Submission of system description paper |
+| ~~May 15, 2026~~ May 18, 2026 | Acceptance notification for system description papers |
 | May 22, 2026 | Camera-ready version due |
 
 All deadlines are **11:59 pm UTC-12h (AoE)**.
