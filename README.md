@@ -2,7 +2,7 @@
 
 The AmericasNLP 2026 Shared Task challenges participants to develop systems that generate accurate, culturally grounded captions for images depicting Indigenous cultures of the Americas, written in the Indigenous languages themselves.
 
-**Update (April 30): We've adjusted our timeline and are pushing back the winner announcement (and subsequent deadlines) by a few days!**
+**Update (April 30): We have adjusted our timeline, pushing back the winner announcement (and subsequent deadlines) by a few days. See the updated dates [here](https://github.com/AmericasNLP/americasnlp2026#important-dates).**
 
 **Update (24th of April):  A corrupted image in the Bribri test set has been fixed. Please re-download the updated test set!**
 
