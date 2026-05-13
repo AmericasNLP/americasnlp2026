@@ -22,7 +22,7 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Version | N Ratings | N Images | Mean Rating |
 |------|------|---------|-----------|----------|-------------|
 | 1 | IUHoosiers | 4 | 228 | 101 | 3.448 |
-| 2 | gators_v1 | 0 | 228 | 101 | 3.390 |
+| 2 | gators | 0 | 228 | 101 | 3.390 |
 | 3 | usp | 0 | 228 | 101 | 2.410 |
 | 4 | NAIST | 0 | 228 | 101 | 1.978 |
 | 5 | Mila | 1 | 228 | 101 | 1.764 |
@@ -32,7 +32,7 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Version | N Ratings | N Images | Mean Rating |
 |------|------|---------|-----------|----------|-------------|
 | 1 | Mila | 3 | 212 | 212 | 3.203 |
-| 2 | gators_v1 | 0 | 212 | 212 | 3.175 |
+| 2 | gators | 0 | 212 | 212 | 3.175 |
 | 3 | yaduha | 0 | 212 | 212 | 2.892 |
 | 4 | NAIST | 0 | 212 | 212 | 1.934 |
 | 5 | InclusionVLM | 0 | 212 | 212 | 1.108 |
@@ -42,7 +42,7 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Version | N Ratings | N Images | Mean Rating |
 |------|------|---------|-----------|----------|-------------|
 | 1 | yaduha | 0 | 200 | 200 | 3.465 |
-| 2 | gators_v1 | 0 | 200 | 200 | 3.375 |
+| 2 | gators | 0 | 200 | 200 | 3.375 |
 | 3 | Mila | 2 | 200 | 200 | 1.560 |
 | 4 | NAIST | 0 | 200 | 200 | 1.220 |
 | 5 | InclusionVLM | 0 | 200 | 200 | 1.185 |
@@ -52,7 +52,7 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Version | N Ratings | N Images | Mean Rating |
 |------|------|---------|-----------|----------|-------------|
 | 1 | NAIST | 0 | 50 | 201 | 3.82 |
-| 2 | gators_v1 | 0 | 50 | 201 | 3.20 |
+| 2 | gators | 0 | 50 | 201 | 3.20 |
 | 3 | 6fanle | 0 | 50 | 201 | 2.62 |
 | 4 | Mila | 2 | 50 | 201 | 2.46 |
 | 5 | InclusionVLM | 0 | 50 | 201 | 2.42 |
@@ -62,7 +62,7 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Version | N Ratings | N Images | Mean Rating |
 |------|------|---------|-----------|----------|-------------|
 | 1 | yaduha | 0 | 320 | 267 | 2.895 |
-| 2 | gators_v1 | 1 | 320 | 267 | 2.758 |
+| 2 | gators | 1 | 320 | 267 | 2.758 |
 | 3 | NAIST | 0 | 320 | 267 | 2.219 |
 | 4 | Mila | 0 | 320 | 267 | 1.994 |
 | 5 | usp | 0 | 320 | 267 | 1.086 |
@@ -71,11 +71,11 @@ Further details on the human annotation procedure will be provided in the shared
 
 # Overall Winner
 
-## 🏆 Overall Winner: **gators_v1**
+## 🏆 Overall Winner: **gators**
 
 | Rank | Team | Total Points |
 |------|------|--------------|
-| 1 | **gators_v1** | **20** |
+| 1 | **gators** | **20** |
 | 2 | NAIST | 14 |
 | 3 | Mila | 13 |
 | 4 | yaduha | 13 |
