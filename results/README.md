@@ -13,7 +13,7 @@ As announced, evaluation followed a two-stage process: systems were first ranked
 
 # Per-Language Winners
 
-Each image was shown alongside the 5 captions, and each caption was rated on a 1–5 scale (see the [annotation guidelines](https://minhducbui.github.io/posts/2026/03/annotations-guidelines/)). When multiple annotators rated the same example, their scores were averaged per example before computing the overall mean. All test-set samples received at least one annotation, except for Wixarika, where 50 samples (≈25%) were annotated.
+Each image was shown alongside the 5 captions, and each caption was rated on a 1–5 scale (see the [annotation guidelines](https://github.com/AmericasNLP/americasnlp2026/tree/main/results/annotation_guideline/README.md)). When multiple annotators rated the same example, their scores were averaged per example before computing the overall mean. All test-set samples received at least one annotation, except for Wixarika, where 50 samples (≈25%) were annotated.
 
 Further details on the human annotation procedure will be provided in the shared task description paper.
 

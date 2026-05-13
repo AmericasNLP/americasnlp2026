@@ -1,0 +1,78 @@
+# Annotation Guidelines
+
+## Cómo calificar
+
+Para cada descripción del sistema, otorgue una sola puntuación general del 1 al 5. Evalúe la descripción según dos dimensiones:
+1. Calidad del idioma: ¿Está escrita en el idioma objetivo? ¿Es gramaticalmente correcta, fluida y natural? Si la descripción en español está mal escrita o es ilegible, la descripción no puede ser buena.
+2. Fidelidad a la imagen y uso correcto de términos culturales: Si la calidad del idioma es buena ¿la descripción refleja lo que realmente se ve en la imagen? ¿Utiliza los términos culturales correctos? ¿Le parecería respetuosa y precisa a alguien de la comunidad?
+
+
+## Escala de calificación
+
+- **5 — Excelente:** Español fluido y natural *y* una descripción precisa y culturalmente fundamentada de la imagen. Usa los términos culturales y técnicos correctos. No hay nada significativo que corregir.
+- **4 — Bueno:** Español claro y bien escrito con una descripción correcta, pero con pequeños defectos — por ejemplo, errores menores, detalles faltantes o vocabulario cultural impreciso.
+- **3 — Mixto:** El idioma es comprensible, pero la descripción es incorrecta, incompleta o demasiado vaga para ser útil.
+- **2 — Deficiente:** El idioma tiene problemas graves (gramática rota, errores frecuentes, difícil de entender) *y* la descripción es mayormente incorrecta. Aún se reconoce como intento.
+- **1 — Inutilizable:** No está en el idioma objetivo, no es comprensible o no tiene relación con la imagen.
+
+
+# Ejemplo
+
+![El Fandi performing a verónica](https://upload.wikimedia.org/wikipedia/commons/1/17/%22El_Fandi%22_a_la_ver%C3%B3nica.jpg)
+
+**Descripción de referencia (guía):** *Un torero realiza un lance a la verónica con el capote ante el toro en la plaza.*
+
+---
+
+### 5 — Excelente
+
+> *"Un torero ejecuta una verónica con el capote ante el toro en la plaza."*
+
+Español fluido, descripción precisa y uso del término cultural correcto (*verónica*) para este pase específico del capote. No hay nada que corregir.
+
+---
+
+### 4 — Bueno
+
+> *"Un hombre con traje rojo sostiene una tela frente a un toro grande."*
+
+Español claro y correcto, y la descripción coincide con la imagen, pero evita el vocabulario cultural y técnico — *"hombre"* en lugar de *torero*, *"traje rojo"* en lugar de *traje de luces*, *"tela"* en lugar de *capote*, y no menciona el pase específico (*verónica*). Es correcto, pero poco preciso culturalmente.
+
+---
+
+### 3 — Mixto
+
+> *"Un hombre con ropa de colores sostiene una tela en un lugar grande."*
+
+El español es comprensible, pero la descripción es demasiado vaga — evita todos los términos culturales, no menciona el toro y apenas describe lo que ocurre. No es incorrecto, pero tampoco útil.
+
+---
+
+### 2 — Deficiente
+
+> *"Mujer azul con guitarra en parque luchar pequeño en calle mucho."*
+
+El idioma tiene problemas graves — faltan artículos, no hay verbos bien conjugados, no hay estructura de oración — y además el contenido es incorrecto (no hay mujer, ni guitarra, ni parque). Se reconoce como intento, pero no es usable.
+
+---
+
+### 1 — Inutilizable
+
+> *"Torador bulleando capelar el rojado arenoso con grandote luchamiento plazudo."*
+
+Las palabras parecen español, pero la mayoría están inventadas o mal formadas, y la frase no se puede entender. No está realmente escrito en el idioma.
+
+---
+
+# Guía de calificación
+
+Esta página muestra cómo funciona la escala de 1 a 5 en la práctica, usando un ejemplo de descripción en español.
+
+---
+
+## Cómo calificar
+
+Para cada descripción del sistema, asigne **una sola puntuación general** del **1 al 5**, considerando dos dimensiones:
+
+1. **Calidad del idioma** — ¿Está escrita en el idioma objetivo? ¿Es gramatical, fluida y natural? Si el idioma es incorrecto o ilegible, la puntuación no puede ser alta aunque el contenido sea correcto.
+2. **Fidelidad a la imagen y adecuación cultural** — ¿La descripción refleja lo que realmente se ve en la imagen? ¿Utiliza los términos culturales correctos? ¿Sería considerada respetuosa y precisa por alguien de la comunidad?
