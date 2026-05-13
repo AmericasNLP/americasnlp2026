@@ -1,10 +1,13 @@
-# Annotation Guidelines
+# Guía de calificación
+
+Esta página muestra cómo funciona la escala de 1 a 5 en la práctica, usando un ejemplo de descripción en español.
 
 ## Cómo calificar
 
-Para cada descripción del sistema, otorgue una sola puntuación general del 1 al 5. Evalúe la descripción según dos dimensiones:
-1. Calidad del idioma: ¿Está escrita en el idioma objetivo? ¿Es gramaticalmente correcta, fluida y natural? Si la descripción en español está mal escrita o es ilegible, la descripción no puede ser buena.
-2. Fidelidad a la imagen y uso correcto de términos culturales: Si la calidad del idioma es buena ¿la descripción refleja lo que realmente se ve en la imagen? ¿Utiliza los términos culturales correctos? ¿Le parecería respetuosa y precisa a alguien de la comunidad?
+Para cada descripción del sistema, asigne **una sola puntuación general** del **1 al 5**, considerando dos dimensiones:
+
+1. **Calidad del idioma:** ¿Está escrita en el idioma objetivo? ¿Es gramaticalmente correcta, fluida y natural? Si la descripción en español está mal escrita o es ilegible, la descripción no puede ser buena.
+2. **Fidelidad a la imagen y uso correcto de términos culturales:** Si la calidad del idioma es buena ¿la descripción refleja lo que realmente se ve en la imagen? ¿Utiliza los términos culturales correctos? ¿Le parecería respetuosa y precisa a alguien de la comunidad?
 
 
 ## Escala de calificación
@@ -64,15 +67,3 @@ Las palabras parecen español, pero la mayoría están inventadas o mal formadas
 
 ---
 
-# Guía de calificación
-
-Esta página muestra cómo funciona la escala de 1 a 5 en la práctica, usando un ejemplo de descripción en español.
-
----
-
-## Cómo calificar
-
-Para cada descripción del sistema, asigne **una sola puntuación general** del **1 al 5**, considerando dos dimensiones:
-
-1. **Calidad del idioma** — ¿Está escrita en el idioma objetivo? ¿Es gramatical, fluida y natural? Si el idioma es incorrecto o ilegible, la puntuación no puede ser alta aunque el contenido sea correcto.
-2. **Fidelidad a la imagen y adecuación cultural** — ¿La descripción refleja lo que realmente se ve en la imagen? ¿Utiliza los términos culturales correctos? ¿Sería considerada respetuosa y precisa por alguien de la comunidad?
