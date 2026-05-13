@@ -1,12 +1,14 @@
+# Results of the Shared Task
+
 A huge thank you to all the teams that participated and made this shared task a success! In total, **8 teams** took part, submitting **69 systems** across all languages.
 
 As announced, evaluation followed a two-stage process: systems were first ranked by an automatic metric (**chrF++**), and the **top 5 systems per language** (one per team, taking each team's best-scoring system) then advanced to human evaluation.
 
 📊 **Automatic metric results:** [results/automatic_metric](https://github.com/AmericasNLP/americasnlp2026/tree/main/results/automatic_metric)
 
-🏆 **Per-language winners:** [results/README.md#-per-language-winners](https://github.com/AmericasNLP/americasnlp2026/blob/main/results/README.md#-per-language-winners)
+🏆 **Per-language winners:** [results/README.md#per-language-winners](https://github.com/AmericasNLP/americasnlp2026/blob/main/results/README.md#per-language-winners)
 
-🥇 **Overall winner:** To recognize the team that performed strongly across *all* languages, we also computed an overall winner based on points earned across the five language rankings — see [results/README.md#-overall-winner](https://github.com/AmericasNLP/americasnlp2026/blob/main/results/README.md#-overall-winner).
+🥇 **Overall winner:** To recognize the team that performed strongly across *all* languages, we also computed an overall winner based on points earned across the five language rankings — see [results/README.md#overall-winner](https://github.com/AmericasNLP/americasnlp2026/blob/main/results/README.md#overall-winner).
 
 
 # Per-Language Winners
