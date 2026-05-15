@@ -76,8 +76,8 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Total Points |
 |------|------|--------------|
 | 🥇 1 | **gators** | **20** |
-| 🥈 2 | NAIST | 14 |
-| 🥉 3 | yaduha | 13 |
+| 2 | NAIST | 14 |
+| 3 | yaduha | 13 |
 | 4 | Mila | 12 |
 | 5 | IUHoosiers | 5 |
 | 6 | usp | 4 |
