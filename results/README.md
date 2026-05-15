@@ -52,7 +52,7 @@ Further details on the human annotation procedure will be provided in the shared
 | Rank | Team | Version | N Ratings | N Images | Mean Rating |
 |------|------|---------|-----------|----------|-------------|
 | 🥇 1 | NAIST | 0 | 201 | 201 | 3.79 |
-| 🥈 2 | gators_v1 | 0 | 201 | 201 | 2.90 |
+| 🥈 2 | gators | 0 | 201 | 201 | 2.90 |
 | 🥉 3 | 6fanle | 0 | 201 | 201 | 2.48 |
 | 4 | InclusionVLM | 0 | 201 | 201 | 2.33 |
 | 5 | Mila | 2 | 201 | 201 | 2.21 |
