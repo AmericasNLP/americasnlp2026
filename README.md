@@ -107,6 +107,12 @@ All deadlines are **11:59 pm UTC-12h (AoE)**.
 
 If you are interested in participating, please register here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe1OPQzxCRWDMBbKi_PTuKsSSnVWB_5PAcs8HsZYhxoImO4BQ/viewform?usp=header)
 
+## License
+
+This dataset is released under the **Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0)**.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/
+
 
 ## Contact
 
